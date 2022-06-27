@@ -1,0 +1,135 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column; */
+    height: 100vh;
+    background-color: var(--primary-light);
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-dark);
+}
+
+input, select, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Header */
+
+.header {
+    font-size: xx-large;
+    margin: 2%;
+    text-align: center;
+}
+
+/* Main Page */
+
+.content {
+    display: flex;
+    gap: 100px;
+    max-width: 1200px;
+    justify-content: flex-start;
+    gap: 200px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.changeGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 500px;
+    gap: 10px;
+    width: 150px;
+}
+
+.grid {
+    display: flex;
+    width: 500px;
+    background-color: var(--secondary-light);
+    height: 500px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+}
+
+.clear {
+    width: 130px;
+    border: var(--primary-dark) 1px solid;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.clear:hover {
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+    cursor: pointer;
+}
+
+.clicker:active {
+    transform: scale(90%);
+}
+
+/* Color change for settings */
+
+.colorSelection {
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border: 1px var(--primary-dark) solid;
+    border-radius: 50px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+}
+
+#colorPicker {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+
+.colorLabel {
+    cursor: pointer;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    border-color: var(--primary-dark);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 120px;;
+    text-align: center;
+}
+
+/* Color change for grid*/
+
+.square {
+    --color: #fefefe;
+}
+
+.square:hover {
+    background: var(--color);
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+}

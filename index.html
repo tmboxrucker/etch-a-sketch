@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="index.css">    
+</head>
+<body>
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div class="content">
+        <div class="changeGrid">
+            <div class="colorSelection"><input class="colorPicker" type="color" id="colorPicker"><!-- insert a color wheel, black as default --></div>
+            <label class="colorLabel clicker" for="colorPicker">Choose a color</label>
+            <div class="gridSelection"><!-- insert a slider for gid size selection --></div>
+            <div>Grid Size</div>
+            <input class="slider" type="range" min="2" max="64" value="2" onchange="sizeChange(this.value)" onmousemove="sizeValueChange(this.value)">
+            <div class="gridSize">2 x 2</div>
+            <button class="clear clicker" onclick="clearGrid()">Clear</button>
+        </div>
+        <div class="grid">
+            <!-- insert a grid pulled from parameters selected-->
+        </div>
+    </div>
+    <div class="footer">
+        <p>Page made by Troy Boxrucker 2022</p>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
