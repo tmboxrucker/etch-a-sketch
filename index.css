@@ -16,6 +16,7 @@ body {
     background-color: var(--primary-light);
     font-family: 'Roboto', sans-serif;
     color: var(--primary-dark);
+    text-align: center;
 }
 
 input, select, button {
@@ -78,6 +79,15 @@ input, select, button {
     transform: scale(90%);
 }
 
+.modeSelector {
+    display: flex;
+    gap: 20px;
+}
+
+p {
+    padding-top: 2em;
+}
+
 /* Color change for settings */
 
 .colorSelection {
@@ -99,7 +109,8 @@ input, select, button {
     border: none;
 }
 
-.colorLabel {
+.clicker {
+
     cursor: pointer;
     background-color: var(--primary-dark);
     color: var(--primary-light);
@@ -109,6 +120,7 @@ input, select, button {
     margin-bottom: 20px;
     width: 120px;;
     text-align: center;
+    
 }
 
 /* Color change for grid*/
