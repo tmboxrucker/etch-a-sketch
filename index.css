@@ -10,8 +10,8 @@
 }
 
 body {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: var(--primary-light);
     font-family: 'Roboto', sans-serif;
@@ -35,13 +35,14 @@ input, select, button {
 /* Main Page */
 
 .content {
-    display: flex;
+    display: inline-flex;
     gap: 100px;
     max-width: 1200px;
     justify-content: flex-start;
-    gap: 200px;
+    gap: 50px;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .changeGrid {
@@ -51,7 +52,11 @@ input, select, button {
     justify-content: center;
     max-height: 500px;
     gap: 10px;
-    width: 150px;
+    width: 300px;
+}
+
+.changeGridRight {
+    visibility: hidden;
 }
 
 .grid {
@@ -86,6 +91,7 @@ input, select, button {
 
 p {
     padding-top: 2em;
+    flex: 1;
 }
 
 /* Color change for settings */
@@ -136,12 +142,22 @@ p {
 /* Footer */
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding-bottom: 10px;
 }
+
+@media (max-width: 1200px) {
+    .content {
+      justify-content: center;
+    }
+    p {
+      visibility: hidden;   
+     } 
+    .changeGridRight {
+        display: none;
+    }
+  }

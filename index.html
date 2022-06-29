@@ -28,11 +28,24 @@
         <div class="grid">
             <!-- insert a grid pulled from parameters selected-->
         </div>
+        <div class="changeGrid changeGridRight">
+            <div class="modeSelector">
+                <button class="buttonLabel clicker colorButton" onclick="colorMode()">Color</button>
+                <button class="buttonLabel clicker rainbowButton" onclick="rainbowMode()">Rainbow</button>
+            </div>
+            <div class="colorSelection"><input class="colorPicker" type="color" id="colorPicker" value="#333333"><!-- insert a color wheel, black as default --></div>
+            <label id="colorLabel" class="clicker" for="colorPicker">Choose a color</label>
+            <div class="gridSelection"><!-- insert a slider for gid size selection --></div>
+            <div>Grid Size</div>
+            <input class="slider" type="range" min="2" max="64" value="8" onchange="sizeChange(this.value)" onmousemove="sizeValueChange(this.value)">
+            <div class="gridSize">8 x 8</div>
+            <button class="clear clicker" onclick="clearGrid()">Clear</button>
+        </div>
         
     </div>
     <p> Left click to draw, right click to erase</p>
     <div class="footer">
-        <p>Page made by Troy Boxrucker 2022</p>
+        Page made by Troy Boxrucker 2022
     </div>
 
 </body>
